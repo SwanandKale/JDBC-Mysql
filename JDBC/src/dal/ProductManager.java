@@ -39,11 +39,8 @@ public class ProductManager {
 		
 		while(result.next())
 		{
-			int id= result.getInt(1);
-			String name=result.getString(2);
-			double price=result.getDouble(3);
 			
-			Product product=new Product(id, name, price);
+			Product product=new Product(result.getInt(1), result.getString(2), result.getDouble(3));
 			allProducts.add(product);
 			
 		}
